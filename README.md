@@ -5,7 +5,15 @@ A live API, which can accept a POST request and runs the submitted content throu
 ```javascript
 bing-autosuggest-final-project.herokuapp.com/suggestions
 ```
-User passes the "mkt" and the "query" in the body and the API returns back the response from the Azure Bing Autosuggest API.
+
+#### Query Parameters
+
+```javascript
+{
+	"mkt": "en-us",
+	"query": "Ch"
+}
+```
 
 #### HEADERS
 ----------
@@ -20,6 +28,72 @@ application/json
 	"mkt": "en-us",
 	"query": "Ch"
 }
+```
+
+### Response:
+```javascript
+{
+    "_type": "Suggestions",
+    "queryContext": {
+        "originalQuery": "Ch"
+    },
+    "suggestionGroups": [
+        {
+            "name": "Web",
+            "searchSuggestions": [
+                {
+                    "url": "https://www.bing.com/search?q=chrome&FORM=USBAPI",
+                    "displayText": "chrome",
+                    "query": "chrome",
+                    "searchKind": "WebSearch"
+                },
+                {
+                    "url": "https://www.bing.com/search?q=chime&FORM=USBAPI",
+                    "displayText": "chime",
+                    "query": "chime",
+                    "searchKind": "WebSearch"
+                },
+                {
+                    "url": "https://www.bing.com/search?q=chase&FORM=USBAPI",
+                    "displayText": "chase",
+                    "query": "chase",
+                    "searchKind": "WebSearch"
+                },
+                {
+                    "url": "https://www.bing.com/search?q=chipotle&FORM=USBAPI",
+                    "displayText": "chipotle",
+                    "query": "chipotle",
+                    "searchKind": "WebSearch"
+                },
+                {
+                    "url": "https://www.bing.com/search?q=chegg&FORM=USBAPI",
+                    "displayText": "chegg",
+                    "query": "chegg",
+                    "searchKind": "WebSearch"
+                },
+                {
+                    "url": "https://www.bing.com/search?q=cheap+flights&FORM=USBAPI",
+                    "displayText": "cheap flights",
+                    "query": "cheap flights",
+                    "searchKind": "WebSearch"
+                },
+                {
+                    "url": "https://www.bing.com/search?q=chick-fil-a&FORM=USBAPI",
+                    "displayText": "chick-fil-a",
+                    "query": "chick-fil-a",
+                    "searchKind": "WebSearch"
+                },
+                {
+                    "url": "https://www.bing.com/search?q=chewy&FORM=USBAPI",
+                    "displayText": "chewy",
+                    "query": "chewy",
+                    "searchKind": "WebSearch"
+                }
+            ]
+        }
+    ]
+}
+
 ```
 
 ----------
@@ -67,9 +141,15 @@ application/json
 }
 ```
 
+### Response:
+```javascript
+Forbidden
+```
+
+
 ----------
 
-### Post: /suggestions 
+### Post: /login
 ```javascript
 bing-autosuggest-final-project.herokuapp.com/login
 ```
@@ -86,6 +166,13 @@ application/json
 ```javascript
 {
 	"query": "Ch"
+}
+```
+
+### Response:
+```javascript
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6IlNhbG9uaSIsImVtYWlsIjoic2d1cHRhMzhAdW5jYy5lZHUifSwiaWF0IjoxNTc2MTAyNzI2fQ.6S7-fEpEe4rxu_M57f9o4b64knv5mO9swMossTNil8U"
 }
 ```
 
@@ -131,3 +218,9 @@ To handle security firstly, Helmet is used. Helmet can help protect the app from
 
 #### JWT:
 Also, to ensure authorization of users, JWT mechanism is also implemented. Since there is no database for this api, a mock user has been created as an authorized user. When an unauthorised user tries to access the API, they receive a 403 Forbidden error. On calling /login endpoint, the user receives a securityToken corresponding to the allowed mock user which they can then insert in the header and access the API. 
+
+## References:
+
+- https://docs.microsoft.com/sl-si/azure/cognitive-services/bing-autosuggest/quickstarts/nodejs
+- https://expressjs.com/en/advanced/best-practice-security.html
+- https://www.youtube.com/watch?v=7nafaH9SddU
