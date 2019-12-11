@@ -22,6 +22,8 @@ application/json
 }
 ```
 
+----------
+
 ### Post: /suggestions 
 ```javascript
 localhost:8080/suggestions
@@ -42,6 +44,9 @@ application/json
 	"query": "Ch"
 }
 ```
+
+----------
+
 ### Post: /suggestions 
 ```javascript
 localhost:8080/suggestions
@@ -62,6 +67,7 @@ application/json
 }
 ```
 
+----------
 
 ### Post: /suggestions 
 ```javascript
@@ -82,11 +88,14 @@ application/json
 	"query": "Ch"
 }
 ```
+
+----------
+
 ### Post: /suggestions 
 ```javascript
 localhost:8080/suggestions
 ```
-While using JWT mechanism, once the user passes the token in the header using Authorization, as Bearer securityToken, the user can then access the API and fetch results.
+While using JWT mechanism, once the user passes the token in the header using Authorization, as Bearer *securityToken*, the user can then access the API and fetch results.
 
 #### HEADERS
 ----------
