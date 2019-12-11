@@ -15,14 +15,10 @@ bing-autosuggest-final-project.herokuapp.com/suggestions
 }
 ```
 
-#### HEADERS
-----------
 #### Content-Type
 application/json
 
 ##### BODY  raw
-----------
-
 ```javascript
 {
 	"mkt": "en-us",
@@ -102,16 +98,12 @@ application/json
 ```javascript
 bing-autosuggest-final-project.herokuapp.com/suggestions
 ```
-
 If the user does not specify "mkt", the API automatically accepts"en-us".
 
-#### HEADERS
-----------
 #### Content-Type
 application/json
 
 ##### BODY  raw
-----------
 
 ```javascript
 {
@@ -127,13 +119,10 @@ bing-autosuggest-final-project.herokuapp.com/suggestions
 ```
 When the JWT security mechanism is turned on, the user cannot access the API unless he has an Authorization token in the header. Thus, the user will receive a 403 Forbidden error.
 
-#### HEADERS
-----------
 #### Content-Type
 application/json
 
 ##### BODY  raw
-----------
 
 ```javascript
 {
@@ -146,7 +135,6 @@ application/json
 Forbidden
 ```
 
-
 ----------
 
 ### Post: /login
@@ -155,14 +143,10 @@ bing-autosuggest-final-project.herokuapp.com/login
 ```
 On turning on the JWT security mechanism, when user accesses the /login endpoint, he receives a token which needs to be then used in the header to access the API.
 
-#### HEADERS
-----------
 #### Content-Type
 application/json
 
 ##### BODY  raw
-----------
-
 ```javascript
 {
 	"query": "Ch"
@@ -185,16 +169,13 @@ bing-autosuggest-final-project.herokuapp.com/suggestions
 While using JWT mechanism, once the user passes the token in the header using Authorization, as Bearer *securityToken*, the user can then access the API and fetch results.
 
 #### HEADERS
-----------
+##### Authorization
+Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6IlNhbG9uaSIsImVtYWlsIjoic2d1cHRhMzhAdW5jYy5lZHUifSwiaWF0IjoxNTc2MDkwMTg3fQ.haHOIp9K7tpnuqNf__jBZiqFYoYPoJqcxs3Yomh435k
+
 #### Content-Type
 application/json
 
-#### Authorization
-
-Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6IlNhbG9uaSIsImVtYWlsIjoic2d1cHRhMzhAdW5jYy5lZHUifSwiaWF0IjoxNTc2MDkwMTg3fQ.haHOIp9K7tpnuqNf__jBZiqFYoYPoJqcxs3Yomh435k
 ##### BODY  raw
-----------
-
 ```javascript
 {
 	"query": "Ch"
