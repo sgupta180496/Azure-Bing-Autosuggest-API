@@ -37,7 +37,7 @@ router.post('/suggestions', urlencodedParser, function(req, res){
 //      var config = {
 //           headers:{
 //                       "Content-Type":"application/json",
-//                       "Ocp-Apim-Subscription-Key": process.env.SUBSCRIPTION_KEY
+//                       "Ocp-Apim-Subscription-Key": 1fea3e22ef164b488d0979c0e112f4c0
 //                   },
 //           params: {
 //                       "q" : req.body.query,
@@ -45,7 +45,7 @@ router.post('/suggestions', urlencodedParser, function(req, res){
 //                   }
 //         }
   
-//         axios.get(process.env.SUGGESTIONS_ENDPOINT, config)
+//         axios.get("https://api.cognitive.microsoft.com/bing/v7.0/Suggestions", config)
 //         .then(function(response){
 //           res.send(response.data);
 //         })
@@ -59,7 +59,7 @@ router.post('/suggestions', urlencodedParser, function(req, res){
   var config = {
        headers:{
                    "Content-Type":"application/json",
-                   "Ocp-Apim-Subscription-Key": process.env.SUBSCRIPTION_KEY
+                   "Ocp-Apim-Subscription-Key": "1fea3e22ef164b488d0979c0e112f4c0"
                },
        params: {
                    "q" : req.body.query,
@@ -67,7 +67,7 @@ router.post('/suggestions', urlencodedParser, function(req, res){
                }
      }
 
-     axios.get(process.env.SUGGESTIONS_ENDPOINT, config)
+     axios.get("https://api.cognitive.microsoft.com/bing/v7.0/Suggestions", config)
      .then(function(response){
        res.send(response.data);
      })
