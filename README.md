@@ -3,7 +3,7 @@ A live API, which can accept a POST request and runs the submitted content throu
 
 ## Post: /suggestions 
 ```javascript
-bing-autosuggest-final-project.herokuapp.com/suggestions
+bingautosuggest.tk:8080/suggestions
 ```
 
 #### Query Parameters
@@ -96,7 +96,7 @@ application/json
 
 ### Post: /suggestions 
 ```javascript
-bing-autosuggest-final-project.herokuapp.com/suggestions
+bingautosuggest.tk:8080/suggestions
 ```
 If the user does not specify "mkt", the API automatically accepts"en-us".
 
@@ -115,7 +115,7 @@ application/json
 
 ### Post: /suggestions 
 ```javascript
-bing-autosuggest-final-project.herokuapp.com/suggestions
+bingautosuggest.tk:8080/suggestions
 ```
 When the JWT security mechanism is turned on, the user cannot access the API unless he has an Authorization token in the header. Thus, the user will receive a 403 Forbidden error.
 
@@ -139,7 +139,7 @@ Forbidden
 
 ### Post: /login
 ```javascript
-bing-autosuggest-final-project.herokuapp.com/login
+bingautosuggest.tk:8080/login
 ```
 On turning on the JWT security mechanism, when user accesses the /login endpoint, he receives a token which needs to be then used in the header to access the API.
 
@@ -164,7 +164,7 @@ application/json
 
 ### Post: /suggestions 
 ```javascript
-bing-autosuggest-final-project.herokuapp.com/suggestions
+bingautosuggest.tk:8080/suggestions
 ```
 While using JWT mechanism, once the user passes the token in the header using Authorization, as Bearer *securityToken*, the user can then access the API and fetch results.
 
