@@ -1,6 +1,8 @@
 # Azure Bing Autosuggest
 A live API, which can accept a POST request and runs the submitted content through the Azure Bing Autosuggest API before sending back the response.
 
+### API: bingautosuggest.tk:8080/suggestions
+
 ## Post: /suggestions 
 ```javascript
 bingautosuggest.tk:8080/suggestions
@@ -182,6 +184,8 @@ application/json
 }
 ```
 
+### Postman Documentation: 
+https://documenter.getpostman.com/view/8810065/SWE85HTa
 
 ### Security:
 #### Helmet:
