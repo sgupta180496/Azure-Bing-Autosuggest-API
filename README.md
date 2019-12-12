@@ -2,6 +2,7 @@
 A live API, which can accept a POST request and runs the submitted content through the Azure Bing Autosuggest API before sending back the response.
 
 ### API: bingautosuggest.tk:8080/suggestions
+User needs to enter the "query" (keywords) and "mkt" (optional) to be searched in the body while using postman as shown in the examples below.
 
 ## Post: /suggestions 
 ```javascript
