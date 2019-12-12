@@ -37,7 +37,7 @@ router.post('/suggestions', urlencodedParser, function(req, res){
 //      var config = {
 //           headers:{
 //                       "Content-Type":"application/json",
-//                       "Ocp-Apim-Subscription-Key": 1fea3e22ef164b488d0979c0e112f4c0
+//                       "Ocp-Apim-Subscription-Key": "ef9f5ae1a3624f9e9c94fff264b92804"
 //                   },
 //           params: {
 //                       "q" : req.body.query,
@@ -59,7 +59,7 @@ router.post('/suggestions', urlencodedParser, function(req, res){
   var config = {
        headers:{
                    "Content-Type":"application/json",
-                   "Ocp-Apim-Subscription-Key": "1fea3e22ef164b488d0979c0e112f4c0"
+                   "Ocp-Apim-Subscription-Key": "ef9f5ae1a3624f9e9c94fff264b92804"
                },
        params: {
                    "q" : req.body.query,
